@@ -3,17 +3,14 @@ $prim-color:#e8be7b;
 $sec-color: #d6a862;
 $prim-text-color: #3a3a3a;
 $sec-text-color:#525252;
+$sprite:"../images/sprites.png";
 @mixin size($fz, $lh) {
     font-size: $fz;
     line-height: $lh;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #fbfcf5;
+    background-color: #fff;
 }
 
 .btn {
@@ -46,59 +43,69 @@ header {
     margin: 0;
     padding: 0;
     color: #fff;
-    padding-bottom: 225px;
+    max-height: 846px;
+    padding-bottom: 259px;
     .soc {
-        display: flex;
-        padding: 20px 0px;
+        border-bottom: 1px solid #66685c;
+        >div {
+            display: flex;
+            padding: 22px 0 20px 0;
+            width: 1180px;
+        }
         p {
-            padding-left: 20px;
-            margin-right: 20px;
+            padding-left: 23px;
+            margin-right: 24px;
+            font-size: 14px;
+            color: #d2d2d0;
         }
         .phone-number {
-            background: url("../images/phone.png") no-repeat 0 4px;
+            background: url($sprite) no-repeat -365px -71px;
         }
         .location {
-            background: url("../images/geo.png") no-repeat 1px 2px;
+            background: url($sprite) no-repeat -361px -20px;
         }
         .icon {
             display: inline-block;
-            vertical-align: top;
+            vertical-align: bottom;
+            margin-top: 4px;
             height: 13px;
             background-color: green;
-            margin-right: 20px;
+            margin-right: 27px;
             &:last-child {
-                margin-right: 0;
+                margin-right: 4px;
             }
         }
         .twitter {
             width: 13px;
+            margin-right: 28px;
             margin-left: auto;
-            background: url("../images/twitter.png") no-repeat 0 1px;
+            background: url($sprite) no-repeat -116px -168px;
         }
         .facebook {
             width: 8px;
-            background: url("../images/facebook.png") no-repeat;
+            background: url($sprite) no-repeat -121px -321px;
         }
         .youtube {
             width: 15px;
-            background: url("../images/youtube.png") no-repeat 0 1px;
+            background: url($sprite) no-repeat -119px -218px;
         }
         .instagram {
             width: 12px;
-            background: url("../images/instagram.png") no-repeat;
+            background: url($sprite) no-repeat -119px -117px;
         }
         .flickr {
             width: 13px;
-            background: url("../images/flickr.png") no-repeat;
+            background: url($sprite) no-repeat -119px -269px;
         }
     }
     .navigation {
+        padding-top: 1px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        border-top: 1px solid #66685c;
-        margin-bottom: 260px;
+        margin-bottom: 235px;
         .logo {
+            padding-top: 19px;
             text-transform: uppercase;
             font-weight: bold;
             margin-top: 10px;
@@ -111,20 +118,48 @@ header {
                 text-transform: uppercase;
                 color: #fff;
                 font-size: 14px;
-                padding: 30px 0;
+                padding: 45px 0 30px 0;
+                margin-right: 28px;
+                &:nth-child(3) {
+                    box-shadow: 0 -2px 0 0 $sec-color;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
+    input {
+        display: none;
+    }
     .slider {
+        position: relative;
         text-align: center;
         font-size: 0;
+        .label-block {
+            position: absolute;
+            width: 6px;
+            right: 32px;
+            top: 62px;
+        }
+        label {
+            cursor: pointer;
+            margin-bottom: 14px;
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #fff;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
         .heading {
             font-size: 64px;
-            margin-bottom: 35px;
+            margin-bottom: 14px;
         }
         p {
             font-size: 16px;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
         mark {
             background-color: transparent;
@@ -138,18 +173,35 @@ header {
                 margin-right: 0px;
             }
         }
+        .watch-video {
+            background: url($sprite) no-repeat -590px -407px, $prim-color;
+            padding-left: 30px;
+            border: 2px solid $prim-color;
+        }
     }
 }
 
+#rad1:checked~.slider label[for="rad1"],
+#rad2:checked~.slider label[for="rad2"],
+#rad3:checked~.slider label[for="rad3"],
+#rad4:checked~.slider label[for="rad4"],
+#rad5:checked~.slider label[for="rad5"] {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 12px;
+    background-color: $prim-color;
+    transform: translate(-20%, -20%)
+}
+
 .services {
-    background-color: #fbfcf5;
+    background: url("../images/service-bg.png") no-repeat 0 -245px;
     text-align: center;
-    padding-top: 120px;
+    padding-top: 111px;
     padding-bottom: 120px;
     .heading {
         font-size: 48px;
         color: $prim-text-color;
-        margin-bottom: 30px;
+        margin-bottom: 16px;
     }
     p {
         font-size: 16px;
@@ -157,33 +209,35 @@ header {
         margin-bottom: 80px;
     }
     .services-btns {
-        margin-bottom: 60px;
+        margin-bottom: 57px;
         font-size: 0;
         .btn {
+            font-family: "Butler Medium", serif;
             font-size: 18px;
-            padding: 128px 0 28px 0;
+            padding: 123px 0 28px 0;
             height: 172px;
             width: 180px;
+            font-weight: bold;
             border: none;
             color: #4d4d4d;
-            margin-right: 30px;
+            margin-right: 54px;
             &:last-child {
                 margin-right: 0;
             }
             &.about {
-                background: url("../images/about.png") no-repeat 73px 40px;
+                background: url($sprite) no-repeat 67px 40px;
             }
             &.wedding {
-                background: url("../images/wedding.png") no-repeat 73px 40px;
+                background: url($sprite) no-repeat 24px -345px;
             }
             &.party {
-                background: url("../images/party.png") no-repeat 73px 40px;
+                background: url($sprite) no-repeat -138px -342px;
             }
             &.beauty-box {
-                background: url("../images/beautybox.png") no-repeat 73px 40px;
+                background: url($sprite) no-repeat -459px -191px;
             }
             &.course {
-                background: url("../images/course.png") no-repeat 73px 40px;
+                background: url($sprite) no-repeat -300px -340px;
             }
             &:hover {
                 background-color: #fff;
@@ -195,22 +249,39 @@ header {
         img {
             box-shadow: 10px 10px 0 0 $prim-color;
         }
-        .info-text {
-            padding-top: 40px;
-            padding-left: 60px;
+        &-text {
+            padding-top: 78px;
+            padding-left: 71px;
             text-align: left;
             .heading {
+                display: block;
+                width: 350px;
                 @include size(24px,
                 36px);
+                margin-bottom: 13px;
             }
             p {
                 @include size(16px,
                 26px);
+                margin-bottom: 30px;
             }
-            a {
+            .more-info {
+                font-family: "Lato Medium", sans-serif;
                 text-decoration: none;
                 color: $sec-color;
                 text-transform: uppercase;
+                position: relative;
+                font-size: 18px;
+                &::after {
+                    right: -19px;
+                    top: 4px;
+                    transform: translateX(100%);
+                    content: "";
+                    position: absolute;
+                    width: 33px;
+                    height: 11px;
+                    background: url($sprite) no-repeat -309px -170px;
+                }
             }
         }
     }
@@ -219,22 +290,45 @@ header {
 .gallery {
     background: url("../images/kiss.jpg");
     min-height: 800px;
-    padding-top: 550px;
+    padding-top: 600px;
     .text {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 38px;
+            height: 16px;
+            top: 64px;
+            left: -61px;
+            transform: translateX(-100%);
+            background: url($sprite) no-repeat -507px -81px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 38px;
+            height: 16px;
+            top: 64px;
+            right: -61px;
+            transform: translateX(100%);
+            background: url($sprite) no-repeat -508px -56px;
+        }
         background-color: #fff;
         width: 970px;
         margin: auto;
-        padding: 30px 85px;
+        padding: 30px 87px;
         display: flex;
         justify-content: space-between;
         .heading {
+            background: url($sprite) no-repeat -178px -218px;
             font-size: 32px;
-            width: 110px;
+            width: 124px;
             color: $prim-text-color;
             border-right: 1px solid $prim-text-color;
+            min-height: 80px;
         }
         p {
-            width: 600px;
+            width: 641px;
             font-size: 16px;
             line-height: 26px;
             color: $prim-text-color;
@@ -243,7 +337,7 @@ header {
 }
 
 .channel {
-    padding: 120px 0;
+    padding: 112px 0 119px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -251,13 +345,14 @@ header {
     background-color: #fff;
     .heading {
         font-size: 48px;
-        margin-bottom: 30px;
+        margin-bottom: 16px;
         color: #2a2a2a;
     }
     p {
         font-size: 16px;
         color: $prim-text-color;
-        margin-bottom: 60px;
+        margin-bottom: 57px;
+        margin-left: 4px;
     }
     .fake-video {
         margin-bottom: 40px;
@@ -265,24 +360,28 @@ header {
     .btn {
         width: 170px;
     }
+    .videos {
+        padding: 14px 0;
+    }
 }
 
 .blog {
     background-color: #f7f7f7;
     text-align: center;
-    padding-top: 120px;
-    padding-bottom: 100px;
+    padding-top: 125px;
+    padding-bottom: 120px;
     .heading {
         color: $prim-text-color;
         @include size(48px,
         30px);
-        margin-bottom: 30px;
+        margin-bottom: 29px;
+        margin-left: 10px;
     }
     nav {
-        margin-bottom: 70px;
+        margin-bottom: 67px;
         a {
             font-family: "Lato", sans-serif;
-            margin-right: 38px;
+            margin-right: 41px;
             text-decoration: none;
             color: $prim-text-color;
             text-transform: lowercase;
@@ -299,7 +398,7 @@ header {
         flex-wrap: wrap;
         justify-content: space-between;
         .photo-item {
-            margin-bottom: 30px;
+            margin-bottom: 26px;
             text-align: left;
             width: 370px;
             &.highlight {
@@ -311,13 +410,17 @@ header {
                 }
             }
             img {
-                margin-bottom: 30px;
+                margin-bottom: 16px;
             }
             .description {
+                padding-right: 10px;
+                font-family: "Lato", sans-serif;
+                font-weight: lighter;
                 color: $sec-text-color;
                 @include size(18px,
                 30px);
-                margin-bottom: 13px;
+                margin-bottom: 10px;
+                text-transform: capitalize;
             }
             .author-date {
                 color: #757575;
@@ -327,48 +430,48 @@ header {
             }
         }
         .more-photos {
-            margin-top: 30px;
+            margin-top: 41px;
             border: 1px solid $sec-text-color;
             width: 170px;
             color: $prim-text-color;
             margin-right: auto;
             margin-left: auto;
+            padding-left: 5px;
         }
     }
 }
 
 .contacts {
     background-color: #fff;
-    padding-top: 120px;
+    padding-top: 109px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     padding-bottom: 120px;
     .heading {
-        font-size: 48px;
+        font-size: 50px;
         color: #2a2a2a;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     p {
         color: $prim-text-color;
-        margin-bottom: 80px;
+        margin-bottom: 67px;
     }
     .all-contacts {
-        display: flex;
-        justify-content: center;
+        >div {
+            display: flex;
+            padding-left: 48px;
+        }
         .contact {
             font-size: 0;
-            margin-right: 80px;
-            &:last-child {
-                margin-right: 0;
-            }
             svg {
                 margin-right: 30px;
             }
             .contact-text {
                 display: inline-block;
                 vertical-align: top;
+                padding-top: 7px;
             }
             .heading {
                 font-family: "Lato", sans-serif;
@@ -381,8 +484,22 @@ header {
             }
             p {
                 font-family: "Butler Light", serif;
-                font-size: 22px;
+                font-size: 24px;
                 margin-bottom: 0;
+            }
+        }
+        .address {
+            margin-right: 74px;
+        }
+        .phone-number {
+            margin-right: 115px;
+        }
+        .e-mail {
+            svg {
+                margin-top: 7px;
+            }
+            .heading {
+                margin-bottom: 7px;
             }
         }
     }
@@ -391,8 +508,8 @@ header {
 footer {
     background-color: #3a3a3a;
     &>div {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 65px;
+        padding-bottom: 75px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -406,10 +523,11 @@ footer {
         }
     }
     nav {
-        margin-bottom: 70px;
+        margin-bottom: 68px;
+        margin-right: 28px;
         color: #e1e1e1;
         a {
-            margin-right: 30px;
+            margin-right: 27px;
             color: #fff;
             text-transform: uppercase;
             &:last-child {
@@ -428,8 +546,48 @@ footer {
     .go-top {
         align-self: flex-end;
         color: #fff;
-        margin-top: -27px;
+        margin-top: -33px;
+        margin-right: 4px;
+        position: relative;
+        &::after {
+            content: "";
+            width: 5px;
+            height: 17px;
+            position: absolute;
+            right: -13px;
+            top: -1px;
+            transform: translateX(100%);
+            background: url($sprite) no-repeat -324px -266px;
+        }
     }
+}
+
+.highlight {
+    position: relative;
+}
+
+.highlight::after {
+    content: "HIGHLIGHT POST";
+    position: absolute;
+    left: -16px;
+    top: 30px;
+    transform-origin: 100% 50%;
+    transform: translateX(-100%) rotate(-90deg);
+    @include size(14px,
+    26px);
+    color: $sec-text-color;
+    font-family: "Avenir Medium", sans-serif;
+    font-weight: bold;
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 170px;
+    width: 1px;
+    height: 50px;
+    background-color: #494949;
 }
 
 .page-container {
@@ -439,7 +597,7 @@ footer {
 }
 
 .large-container {
-    width: 1170px;
+    width: 1172px;
     margin: auto;
 }
 
@@ -468,6 +626,14 @@ footer {
 @font-face {
     font-family: "Butler Light";
     src: url("../fonts/Butler/butler_light-webfont.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Avenir Medium";
+    src: url("../fonts/Avenir/Avenir-Medium-webfont.eot");
+    src: url("../fonts/Avenir/Avenir-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir/Avenir-Medium-webfont.woff") format("woff"), url("../fonts/Avenir/Avenir-Medium-webfont.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
