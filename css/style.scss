@@ -466,50 +466,52 @@ input[name="slider"] {
         color: $prim-text-color;
         margin-bottom: 67px;
     }
-    .all-contacts {
-        >div {
-            display: flex;
-            padding-left: 48px;
+}
+
+.all-contacts {
+    >div {
+        display: flex;
+        padding-left: 48px;
+    }
+    .address {
+        margin-right: 74px;
+    }
+    .phone-number {
+        margin-right: 115px;
+    }
+    .e-mail {
+        svg {
+            margin-top: 7px;
         }
-        .contact {
-            font-size: 0;
-            svg {
-                margin-right: 30px;
-            }
-            .contact-text {
-                display: inline-block;
-                vertical-align: top;
-                padding-top: 7px;
-            }
-            .heading {
-                font-family: "Lato", sans-serif;
-                font-size: 14px;
-                margin-bottom: 0;
-                text-transform: uppercase;
-                color: #2a2a2a;
-                font-weight: normal;
-                margin-bottom: 10px;
-            }
-            p {
-                font-family: "Butler Light", serif;
-                font-size: 24px;
-                margin-bottom: 0;
-            }
+        .heading {
+            margin-bottom: 7px;
         }
-        .address {
-            margin-right: 74px;
-        }
-        .phone-number {
-            margin-right: 115px;
-        }
-        .e-mail {
-            svg {
-                margin-top: 7px;
-            }
-            .heading {
-                margin-bottom: 7px;
-            }
-        }
+    }
+}
+
+.contact {
+    font-size: 0;
+    svg {
+        margin-right: 30px;
+    }
+    .contact-text {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 7px;
+    }
+    .heading {
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        color: #2a2a2a;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+    p {
+        font-family: "Butler Light", serif;
+        font-size: 24px;
+        margin-bottom: 0;
     }
 }
 
