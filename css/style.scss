@@ -45,139 +45,143 @@ header {
     color: #fff;
     max-height: 846px;
     padding-bottom: 259px;
-    .soc {
-        border-bottom: 1px solid #66685c;
-        >div {
-            display: flex;
-            padding: 22px 0 20px 0;
-            width: 1180px;
-        }
-        p {
-            padding-left: 23px;
-            margin-right: 24px;
-            font-size: 14px;
-            color: #d2d2d0;
-        }
-        .phone-number {
-            background: url($sprite) no-repeat -365px -71px;
-        }
-        .location {
-            background: url($sprite) no-repeat -361px -20px;
-        }
-        .icon {
-            display: inline-block;
-            vertical-align: bottom;
-            margin-top: 4px;
-            height: 13px;
-            background-color: green;
-            margin-right: 27px;
-            &:last-child {
-                margin-right: 4px;
-            }
-        }
-        .twitter {
-            width: 13px;
-            margin-right: 28px;
-            margin-left: auto;
-            background: url($sprite) no-repeat -116px -168px;
-        }
-        .facebook {
-            width: 8px;
-            background: url($sprite) no-repeat -121px -321px;
-        }
-        .youtube {
-            width: 15px;
-            background: url($sprite) no-repeat -119px -218px;
-        }
-        .instagram {
-            width: 12px;
-            background: url($sprite) no-repeat -119px -117px;
-        }
-        .flickr {
-            width: 13px;
-            background: url($sprite) no-repeat -119px -269px;
-        }
-    }
-    .navigation {
-        padding-top: 1px;
+}
+
+.soc {
+    border-bottom: 1px solid #66685c;
+    >div {
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-bottom: 235px;
-        .logo {
-            padding-top: 19px;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        nav {
-            font-family: 'Lato', sans-serif;
-            a {
-                display: inline-block;
-                text-decoration: none;
-                text-transform: uppercase;
-                color: #fff;
-                font-size: 14px;
-                padding: 45px 0 30px 0;
-                margin-right: 28px;
-                &:nth-child(3) {
-                    box-shadow: 0 -2px 0 0 $sec-color;
-                }
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
+        padding: 22px 0 20px 0;
+        width: 1180px;
+    }
+    p {
+        padding-left: 23px;
+        margin-right: 24px;
+        font-size: 14px;
+        color: #d2d2d0;
+    }
+    .phone-number {
+        background: url($sprite) no-repeat -365px -71px;
+    }
+    .location {
+        background: url($sprite) no-repeat -361px -20px;
+    }
+    .icon {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-top: 4px;
+        height: 13px;
+        background-color: green;
+        margin-right: 27px;
+        &:last-child {
+            margin-right: 4px;
         }
     }
-    input {
-        display: none;
+    .twitter {
+        width: 13px;
+        margin-right: 28px;
+        margin-left: auto;
+        background: url($sprite) no-repeat -116px -168px;
     }
-    .slider {
-        position: relative;
-        text-align: center;
-        font-size: 0;
-        .label-block {
-            position: absolute;
-            width: 6px;
-            right: 32px;
-            top: 62px;
+    .facebook {
+        width: 8px;
+        background: url($sprite) no-repeat -121px -321px;
+    }
+    .youtube {
+        width: 15px;
+        background: url($sprite) no-repeat -119px -218px;
+    }
+    .instagram {
+        width: 12px;
+        background: url($sprite) no-repeat -119px -117px;
+    }
+    .flickr {
+        width: 13px;
+        background: url($sprite) no-repeat -119px -269px;
+    }
+}
+
+.top-navigation {
+    padding-top: 1px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 235px;
+    .logo {
+        padding-top: 19px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    nav {
+        font-family: 'Lato', sans-serif;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        padding: 45px 0 30px 0;
+        margin-right: 28px;
+        &:nth-child(3) {
+            box-shadow: 0 -2px 0 0 $sec-color;
         }
-        label {
-            cursor: pointer;
-            margin-bottom: 14px;
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            background-color: #fff;
-            &:last-child {
-                margin-bottom: 0;
-            }
+        &:last-child {
+            margin-right: 0;
         }
-        .heading {
-            font-size: 64px;
-            margin-bottom: 14px;
+    }
+}
+
+input[name="slider"] {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    text-align: center;
+    font-size: 0;
+    .label-block {
+        position: absolute;
+        width: 6px;
+        right: 32px;
+        top: 62px;
+    }
+    label {
+        cursor: pointer;
+        margin-bottom: 14px;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        &:last-child {
+            margin-bottom: 0;
         }
-        p {
-            font-size: 16px;
-            margin-bottom: 45px;
+    }
+    .heading {
+        font-size: 64px;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 45px;
+    }
+    mark {
+        background-color: transparent;
+        color: $prim-color;
+    }
+    .btn {
+        font-size: 14px;
+        width: 180px;
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0px;
         }
-        mark {
-            background-color: transparent;
-            color: $prim-color;
-        }
-        .btn {
-            font-size: 14px;
-            width: 180px;
-            margin-right: 30px;
-            &:last-child {
-                margin-right: 0px;
-            }
-        }
-        .watch-video {
-            background: url($sprite) no-repeat -590px -407px, $prim-color;
-            padding-left: 30px;
-            border: 2px solid $prim-color;
-        }
+    }
+    .watch-video {
+        background: url($sprite) no-repeat -590px -407px, $prim-color;
+        padding-left: 30px;
+        border: 2px solid $prim-color;
     }
 }
 
@@ -208,80 +212,82 @@ header {
         color: $prim-text-color;
         margin-bottom: 80px;
     }
-    .services-btns {
-        margin-bottom: 57px;
-        font-size: 0;
-        .btn {
-            font-family: "Butler Medium", serif;
-            font-size: 18px;
-            padding: 123px 0 28px 0;
-            height: 172px;
-            width: 180px;
-            font-weight: bold;
-            border: none;
-            color: #4d4d4d;
-            margin-right: 54px;
-            &:last-child {
-                margin-right: 0;
-            }
-            &.about {
-                background: url($sprite) no-repeat 67px 40px;
-            }
-            &.wedding {
-                background: url($sprite) no-repeat 24px -345px;
-            }
-            &.party {
-                background: url($sprite) no-repeat -138px -342px;
-            }
-            &.beauty-box {
-                background: url($sprite) no-repeat -459px -191px;
-            }
-            &.course {
-                background: url($sprite) no-repeat -300px -340px;
-            }
-            &:hover {
-                background-color: #fff;
-            }
+}
+
+.services-btns {
+    margin-bottom: 57px;
+    font-size: 0;
+    .btn {
+        font-family: "Butler Medium", serif;
+        font-size: 18px;
+        padding: 123px 0 28px 0;
+        height: 172px;
+        width: 180px;
+        font-weight: bold;
+        border: none;
+        color: #4d4d4d;
+        margin-right: 54px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.about {
+            background: url($sprite) no-repeat 67px 40px;
+        }
+        &.wedding {
+            background: url($sprite) no-repeat 24px -345px;
+        }
+        &.party {
+            background: url($sprite) no-repeat -138px -342px;
+        }
+        &.beauty-box {
+            background: url($sprite) no-repeat -459px -191px;
+        }
+        &.course {
+            background: url($sprite) no-repeat -300px -340px;
+        }
+        &:hover {
+            background-color: #fff;
         }
     }
-    .info {
-        display: flex;
-        img {
-            box-shadow: 10px 10px 0 0 $prim-color;
+}
+
+.info {
+    display: flex;
+    img {
+        box-shadow: 10px 10px 0 0 $prim-color;
+    }
+    &-text {
+        padding-top: 78px;
+        padding-left: 71px;
+        text-align: left;
+        .heading {
+            display: block;
+            width: 350px;
+            @include size(24px,
+            36px);
+            margin-bottom: 13px;
         }
-        &-text {
-            padding-top: 78px;
-            padding-left: 71px;
-            text-align: left;
-            .heading {
-                display: block;
-                width: 350px;
-                @include size(24px,
-                36px);
-                margin-bottom: 13px;
-            }
-            p {
-                @include size(16px,
-                26px);
-                margin-bottom: 30px;
-            }
-            .more-info {
-                font-family: "Lato Medium", sans-serif;
-                text-decoration: none;
-                color: $sec-color;
-                text-transform: uppercase;
-                position: relative;
-                font-size: 18px;
-                &::after {
-                    right: -19px;
-                    top: 4px;
-                    transform: translateX(100%);
-                    content: "";
-                    position: absolute;
-                    width: 33px;
-                    height: 11px;
-                    background: url($sprite) no-repeat -309px -170px;
-                }
+        p {
+            @include size(16px,
+            26px);
+            margin-bottom: 30px;
+        }
+        .more-info {
+            font-family: "Lato Medium", sans-serif;
+            text-decoration: none;
+            color: $sec-color;
+            text-transform: uppercase;
+            position: relative;
+            font-size: 18px;
+            &::after {
+                right: -19px;
+                top: 4px;
+                transform: translateX(100%);
+                content: "";
+                position: absolute;
+                width: 33px;
+                height: 11px;
+                background: url($sprite) no-repeat -309px -170px;
             }
         }
     }
@@ -291,7 +297,7 @@ header {
     background: url("../images/kiss.jpg");
     min-height: 800px;
     padding-top: 600px;
-    .text {
+    &-text {
         position: relative;
         &::after {
             content: "";
@@ -377,7 +383,7 @@ header {
         margin-bottom: 29px;
         margin-left: 10px;
     }
-    nav {
+    &-navigation {
         margin-bottom: 67px;
         a {
             font-family: "Lato", sans-serif;
@@ -393,51 +399,53 @@ header {
             }
         }
     }
-    .photos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .photo-item {
-            margin-bottom: 26px;
-            text-align: left;
-            width: 370px;
-            &.highlight {
-                width: 770px;
-            }
-            &:nth-child(2) {
-                img {
-                    box-shadow: 10px 10px 0 0 $prim-color;
-                }
-            }
-            img {
-                margin-bottom: 16px;
-            }
-            .description {
-                padding-right: 10px;
-                font-family: "Lato", sans-serif;
-                font-weight: lighter;
-                color: $sec-text-color;
-                @include size(18px,
-                30px);
-                margin-bottom: 10px;
-                text-transform: capitalize;
-            }
-            .author-date {
-                color: #757575;
-                font-size: 16px;
-                font-family: "Butler Light", serif;
-                font-weight: lighter;
-            }
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .more-photos {
+        margin-top: 41px;
+        border: 1px solid $sec-text-color;
+        width: 170px;
+        color: $prim-text-color;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 5px;
+    }
+}
+
+.photo-item {
+    margin-bottom: 26px;
+    text-align: left;
+    width: 370px;
+    &.highlight {
+        width: 770px;
+    }
+    &:nth-child(2) {
+        img {
+            box-shadow: 10px 10px 0 0 $prim-color;
         }
-        .more-photos {
-            margin-top: 41px;
-            border: 1px solid $sec-text-color;
-            width: 170px;
-            color: $prim-text-color;
-            margin-right: auto;
-            margin-left: auto;
-            padding-left: 5px;
-        }
+    }
+    img {
+        margin-bottom: 16px;
+    }
+    .description {
+        padding-right: 10px;
+        font-family: "Lato", sans-serif;
+        font-weight: lighter;
+        color: $sec-text-color;
+        @include size(18px,
+        30px);
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+    .author-date {
+        color: #757575;
+        font-size: 16px;
+        font-family: "Butler Light", serif;
+        font-weight: lighter;
     }
 }
 
@@ -505,9 +513,9 @@ header {
     }
 }
 
-footer {
+.footer {
     background-color: #3a3a3a;
-    &>div {
+    >div {
         padding-top: 65px;
         padding-bottom: 75px;
         display: flex;
@@ -522,7 +530,7 @@ footer {
             text-decoration: underline;
         }
     }
-    nav {
+    &-navigation {
         margin-bottom: 68px;
         margin-right: 28px;
         color: #e1e1e1;
@@ -535,7 +543,7 @@ footer {
             }
         }
     }
-    .footer-links {
+    &-links {
         color: #e1e1e1;
         a {
             color: inherit;
